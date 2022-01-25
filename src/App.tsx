@@ -33,7 +33,7 @@ function App() {
         })
           .then(res => res.json())
           .then(res => {
-            setResponse(`${window.location.href}/w/${res.word}`);
+            setResponse(`${window.location.href}w/${res.word}`);
           })
       } else {
         setResponse(`'${url}': Invalid URL`);
