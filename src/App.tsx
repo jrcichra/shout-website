@@ -48,7 +48,7 @@ function App() {
         <input type="text" placeholder='https://google.com' value={url} onChange={(e) => setUrl(e.target.value)} />
         <br></br>
         <input type="button" value="Add" onClick={() => setGo(true)} />
-        <p>{response}</p>
+        <a href={response}>{response}</a>
       </header>
     </div>
   )
