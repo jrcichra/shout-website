@@ -13,3 +13,4 @@ like yellkey.com but serverless
 # TODO
 + Move API to page functions: https://developers.cloudflare.com/pages/platform/functions
 + Remove `/w/` in path
++ Make enter key submit form
