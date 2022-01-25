@@ -1,9 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 
-const baseURL = 'https://shout.jrcichra.dev';
-
-
 function isValidHttpUrl(string: string) {
   let url;
   try {
@@ -25,7 +22,7 @@ function App() {
       setGo(false);
       setResponse('');
       if (isValidHttpUrl(url)) {
-        fetch(`${baseURL}/api/`, {
+        fetch(`api/`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -36,7 +33,7 @@ function App() {
         })
           .then(res => res.json())
           .then(res => {
-            setResponse(`${baseURL}/${res.word}`);
+            setResponse(`${window.location.href}/w/${res.word}`);
           })
       } else {
         setResponse(`'${url}': Invalid URL`);
